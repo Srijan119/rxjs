@@ -1,0 +1,15 @@
+<h1>Share replay</h1>
+<button class="btn btn-success" (click)="getfilteredData()">Filter</button>
+
+<div class="row">
+<div class="card col-md-4" *ngFor="let item of filteredUserId |async">
+    <span>{{item.userId}}</span>
+</div>
+
+<div class="card col-md-4" *ngFor="let item of filteredBool |async">
+    {{item.completed}}
+</div>
+<div class="card col-md-4" *ngFor="let item of allUsers |async">
+    {{item.completed}}
+</div>
+</div>
